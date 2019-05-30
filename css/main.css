@@ -2,7 +2,7 @@
 GENERAL
 **************/
 
-bpdy {
+body {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -24,13 +24,13 @@ h3 {
   margin: 0 0 1em 0;
 }
 
-
 /**************
 HEADING
 **************/
 
 header {
-  float: left;
+  /* float: left; */
+  height: 95px;
   margin: 0 0 30px 0;
   padding: 5px 0 0 0;
   width: 100%;
@@ -124,6 +124,67 @@ PORTFOLIO
   padding: 5%;
   font-size: 0.75em;
   color: #6ab47b;;
+}
+
+#current {
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 2em;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+#current li {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  background-color: #f5f5f5;
+  color: #bdc3c7
+}
+
+#current li a p {
+  margin: 0;
+  padding: 5%;
+  font-size: 1.35em;
+  color: #6ab47b;;
+}
+
+#gallery li:hover,
+#current li:hover {
+  transform: scale(1.1, 1.1);
+ -moz-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  -moz-box-shadow: 5px 5px 5px 5px #888;
+  -webkit-box-shadow: 5px 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px 5px #888;
+}
+
+.primary-content {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 1.5em;
+  text-align: center;
+  color: #599a68;
+}
+
+.secondary-content {
+  width: 50%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 1.5em;
+  text-align: center;
+  color: #599a68;
+}
+
+.t-border {
+  margin-top: 3em;
+  border-top: 2px solid #6ab47b;
 }
 
 
