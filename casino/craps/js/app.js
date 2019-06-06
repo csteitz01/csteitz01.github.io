@@ -9,22 +9,21 @@ function rollDice() {
     die2.innerHTML = d2;
     status.innerHTML - "You rolled " +diceTotal+ "."
 }
-//is that incorrect?
 
 function showTotal() {
 let diceTotal = rollDice.diceTotal;
 
     let message = "" + diceTotal + " was rolled.";
 
-    $('.total').hide();
-
-    $('.rules #button').click(function() {
-        $('.total').text("message");
-        $('.total').show;
+    $('.dieButton #button').click(function() {
+        $('.status').text(message);
+        $('.status').show;
     });
 }
 
-document.getElementById('button').addEventListener('click',
+
+
+document.getElementById('rules').addEventListener('click',
 function() {
     document.querySelector('.bg-modal').style.display = 'flex';
 });
