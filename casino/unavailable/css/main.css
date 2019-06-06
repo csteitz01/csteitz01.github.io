@@ -1,0 +1,63 @@
+/**************
+GENERAL
+**************/
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url('../img/felt.jpg');
+}
+
+* {
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+.display {
+    display: flex;
+    justify-content: center;
+}
+
+.goBack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+h1 {
+    color: #DAA520;
+    text-shadow: 3px 0 black;
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.25rem;
+    color: #990000;
+    width: 80%;
+  }
+
+  button {
+    margin: 3rem;
+    width: 10rem;
+    height: 10rem;
+    font-size: 2rem;
+  }
