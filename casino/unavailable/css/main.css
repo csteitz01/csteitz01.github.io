@@ -61,3 +61,7 @@ h2 {
     height: 10rem;
     font-size: 2rem;
   }
+
+  button:hover {
+      filter: brightness(85%);
+  }

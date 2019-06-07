@@ -16,8 +16,8 @@ let diceTotal = rollDice.diceTotal;
     let message = "" + diceTotal + " was rolled.";
 
     $('.dieButton #button').click(function() {
-        $('.status').text(message);
-        $('.status').show;
+        $('#status').text(message);
+        $('#status').show;
     });
 }
 
