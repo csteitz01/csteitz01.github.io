@@ -13,31 +13,33 @@ function replace(diceTotal) {
     $("#status h3").text(diceTotal);
 }
 
-// document.addEventListener('#bank .submit', (e) => {
-//     let num = input.value;
-//     if (num < 1) {
-//         alert('You need to have more than $1 if you want to play');
-//     }
-//     else {
-//         document.querySelector('#bank input').style.display = 'none';
-//         document.querySelector('#bank button').style.display = 'none';
-//         $("h2 span").text(num);
-//     }
-// });
+var broll;
 
 $(".submit").click(function(){
-    $("#money").hide();
-    $(".submit").hide();
     let broll = $(".initial").val();
-    $('.blank1').text(broll);
+    if (broll < 1){
+        alert('You need to have at least $1 to play.');
+    }
+    else {
+        $("#money").hide();
+        $(".submit").hide();
+        $('.blank1').text(broll);
+    }
   });
 
-
 $(".bet-submit").click(function(){
-    $(".bet-size").hide();
-    $(".bet-submit").hide();
     let bet = $(".bet-size").val();
-    $('.blank2').text(bet);
+    if (bet > broll) {
+        alert('You cannot bet more money than you have.')
+    }
+    else if (bet < 1) {
+        alert('You have to bet at least $1 to play.')
+    }
+    else {
+        $(".bet-size").hide();
+        $(".bet-submit").hide();
+        $('.blank2').text(bet);
+    }
   });
 
 document.getElementById('rules').addEventListener('click',
