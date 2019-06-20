@@ -13,16 +13,38 @@ function replace(diceTotal) {
     $("#status h3").text(diceTotal);
 }
 
-document.addEventListener('#bank submit', (e) => {
-    let num = input.value;
-    if (num < 1) {
-        alert('You need to have more than $1 if you want to play');
-    }
-    else {
-        document.querySelector('#bank input').style.display = 'none';
-        document.querySelector('#bank button').style.display = 'none';
-        $("h2 span").text(num);
-    }
+// document.addEventListener('#bank .submit', (e) => {
+//     let num = input.value;
+//     if (num < 1) {
+//         alert('You need to have more than $1 if you want to play');
+//     }
+//     else {
+//         document.querySelector('#bank input').style.display = 'none';
+//         document.querySelector('#bank button').style.display = 'none';
+//         $("h2 span").text(num);
+//     }
+// });
+
+$(".submit").click(function(){
+    $("#money").hide();
+    $(".submit").hide();
+  });
+
+document.querySelector('.submit').addEventListener('click',
+function() {
+    let broll = $(".initial").val();
+    $('.blank1').text(broll);
+});
+
+$(".bet-submit").click(function(){
+    $(".bet-size").hide();
+    $(".bet-submit").hide();
+  });
+
+document.querySelector('.bet-submit').addEventListener('click',
+function() {
+    let bet = $(".bet-size").val();
+    $('.blank2').text(bet);
 });
 
 document.getElementById('rules').addEventListener('click',
