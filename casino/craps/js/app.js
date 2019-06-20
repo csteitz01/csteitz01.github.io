@@ -28,24 +28,17 @@ function replace(diceTotal) {
 $(".submit").click(function(){
     $("#money").hide();
     $(".submit").hide();
-  });
-
-document.querySelector('.submit').addEventListener('click',
-function() {
     let broll = $(".initial").val();
     $('.blank1').text(broll);
-});
+  });
+
 
 $(".bet-submit").click(function(){
     $(".bet-size").hide();
     $(".bet-submit").hide();
-  });
-
-document.querySelector('.bet-submit').addEventListener('click',
-function() {
     let bet = $(".bet-size").val();
     $('.blank2').text(bet);
-});
+  });
 
 document.getElementById('rules').addEventListener('click',
 function() {
