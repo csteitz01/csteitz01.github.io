@@ -11,25 +11,49 @@
                 <h1>Simplified Craps</h1>
             </header>
             <div class='bankroll'>
-                <h2>Bankroll: $?</h2>
+                <h2>Bankroll: $</h2>
+                <form id='bank'>
+                    <h2 class='blank1'><span></span></h2>
+                    <input type="number" id='money' placeholder="0">
+                    <button type="button" name="submit" value="submit">Submit</button>
+                </form>
+            </div>
+            <div class='bet-amount'>
+                <h2>Bet Amount $</h2>
+                <form id='bet'>
+                    <h2 class='blank2'><span></span></h2>
+                    <input type="number" id='money' placeholder="0">
+                    <button type="button" name="submit" value="submit">Submit</button>
+                </form>
+            </div>
+            <div class='bet-type'>
+                <h2 class='line'>Bet Type</h2>
+                <div class='types'>
+                    <input type="radio" name='bet' value='pass'><p>&nbsp; Pass</p><span style="margin-right:3em; margin-left:3em;">&nbsp;</span>
+                    <input type="radio" name='bet' value="don't pass"><p>&nbsp; Don't Pass</p>
+                </div>
             </div>
             <div class='display'>
-                <div id='die1' class='dice'>?</div>
-                <div id='die2' class='dice'>?</div>
+                <div id='die1' class='dice'>
+                    <img src="img/dice1.png" class='d1' alt='die showing one'>
+                </div>
+                <div id='die2' class='dice'>
+                    <img src="img/dice6.png" class='d6' alt='die showing six'>
+                </div>
             </div>
             <div class='options'>
                 <div class='quit'>
                     <button id="quit" onclick="javascript:history.back()">Quit</button>
                 </div>
                 <div class='play'>
-                    <button class='dieButton' onclick="rollDice()">Roll Dice</button>
+                    <button id='dieButton' onclick="rollDice()">Roll Dice</button>
                 </div>
                 <div class='rules'>
                     <button id='rules'>Rules</button>
                 </div>
             </div>
             <div id='status'>
-                <p>The dice roll total</p>
+                <h3>The dice roll total</h3>
             </div>
             <div class="bg-modal">
                 <div class="modal-content">

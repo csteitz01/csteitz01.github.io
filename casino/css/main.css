@@ -1,20 +1,4 @@
 /**************
-FONT
-**************/
-
-@font-face {
-    font-family: 'BebasNeueRegular';
-    src: url(BebasNeueRegular.eot);
-    src: url(BebasNeueRegular.eot?#iefix) format('embedded-opentype'),
-         url(BebasNeueRegular.woff) format('woff'),
-         url(BebasNeueRegular.ttf) format('truetype'),
-         url(BebasNeueRegular.svg) format('svg');
-
-    font-weight: normal;
-    font-style: normal;
-}
-
-/**************
 GENERAL
 **************/
 
@@ -55,6 +39,7 @@ h1 {
     display: inline-block;
     vertical-align: middle;
     margin: auto;
+    z-index: 1000;
 }
 
 /**************
@@ -116,6 +101,10 @@ FLEXBOX
       text-align: center;
       align-items: center;
       position: relative;
+  }
+
+  .broken .game {
+    filter: brightness(50%);
   }
 
   .broken:hover,
