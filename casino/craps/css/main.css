@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    background: url('../img/felt.jpg');
+    background-image: url('../img/felt.png');
 }
 
 * {
@@ -151,6 +151,11 @@ h1 {
     padding: 0.625em;
     align-items: center;
     margin: 0.3125em;
+}
+
+#quit, #dieButton, #rules {
+    width: 5em;
+    height: 5em;
 }
 
 

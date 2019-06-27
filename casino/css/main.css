@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    background: url('../img/felt.jpg');
+    background: url('../img/felt.png');
 }
 
 * {
@@ -63,7 +63,7 @@ header {
   .intro {
     text-align: center;
     font-size: 2.25em;
-    color: #990000;
+    color: #1a0881;
     width: 100%;
   }
 
