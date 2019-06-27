@@ -1,7 +1,9 @@
-@media screen and (min-width: 480px) {
+@media (max-width: 656px) {
 
-.games {
-    flex-direction: row;
-}
+    /* I wanted the working game to be the first item
+       when the screen was displaying two games per line */
+    .games :nth-child(2) {
+        order: -1;
+    }
 
 }

@@ -1,5 +1,14 @@
-@media (min-width: 0) and (max-width: 768px) {
+@media (min-width: 0) and (max-width: 1056px) {
 
-    
+    /* The boxes would stack on top of each other when the window size was less than 1056px
+       which was cause by the margin right and left, so I made them 0 and added margin top
+       because I think the buttons look better further away from the dice when the buttons
+       are clutered together */
+    .options {
+        flex-flow: none;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 3em;
+    }
 
 }
