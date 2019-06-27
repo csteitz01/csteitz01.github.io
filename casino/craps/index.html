@@ -43,7 +43,8 @@
             </div>
             <div class='options'>
                 <div class='quit'>
-                    <button id="quit" onclick="javascript:history.back()">Quit</button>
+                    <!--onclick="javascript:history.back()" for exiting page without modal-->
+                    <button id="quit">Quit</button>
                 </div>
                 <div class='play'>
                     <button id='dieButton' onclick="rollDice()">Roll Dice</button>
@@ -77,6 +78,16 @@
                     back to the selection screen. The Roll Dice button rolls the dice,
                     and the Rules button shows this screen again if you need a refresher. </p>
                     <button class='close'>Got it</button>
+                </div>
+                <div class="modal-content-quit">
+                    <h2>Quitting Already?</h2>
+                    <p>Are you sure that you want to quit? You could win a lot of money.
+                        If you changed your mind and want to keep playing, then click the 
+                        Keep Playing button. If you really are done playing, then click the Leave
+                        button, have a great day and come back as soon as you can!
+                    </p>
+                    <button class='leave'>Leave</button>
+                    <button class='close'>Keep Playing</button>
                 </div>
             </div>
             <script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>

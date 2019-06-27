@@ -191,3 +191,26 @@ MODAL
 .modal-content-rules h2 {
     margin: 10px;
 }
+
+.modal-content-quit {
+    width: 31.25em;
+    height: 22em;
+    background-color: white;
+    border-radius: 0.3125em;
+    text-align: center;
+    padding: 1.25em;
+    margin-bottom: 0.3125em;
+    display: none;
+}
+
+.modal-content-quit .leave {
+    margin: 1.1em;
+}
+
+.modal-content-quit .close {
+    margin: 1.1em;
+}
+
+.modal-content-quit h2 {
+    margin: 10px;
+}

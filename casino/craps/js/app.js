@@ -99,6 +99,10 @@ $(".bet-submit").click(function(){
     }
   });
 
+$(".quit").click(function(){
+    document.querySelector('.modal-content-quit').style.display = 'flex';
+})
+
 document.getElementById('rules').addEventListener('click',
 function() {
     document.querySelector('.bg-modal').style.display = 'flex';
