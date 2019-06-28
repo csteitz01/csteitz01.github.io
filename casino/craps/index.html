@@ -43,7 +43,6 @@
             </div>
             <div class='options'>
                 <div class='quit'>
-                    <!--onclick="javascript:history.back()" for exiting page without modal-->
                     <button id="quit">Quit</button>
                 </div>
                 <div class='play'>
@@ -56,29 +55,7 @@
             <div id='status'>
                 <h3>The dice roll total</h3>
             </div>
-            <div class="bg-modal">
-                <div class="modal-content-rules">
-                    <h2>The Rules</h2>
-                    <p>Welcome to Simplified Craps!<br>
-                    The rules are as follows: You will be making
-                    bets on two dice being rolled, and your
-                    options for betting are called
-                    Pass or Don't Pass. Pass means you are betting
-                    a 7 or an 11 will be rolled first, while betting 
-                    on Don't Pass means you are betting a 2, 3, or 12
-                    will be rolled first. Any other numbers being rolled 
-                    will result in rerolling until one of the
-                    previously stated numbers are rolled. Calling the 
-                    bet correctly will result in doubling your bet,
-                    while calling it incorrectly will result in you losing
-                    that bet. You will be asked how much money you are
-                    bringing to the table, and you can't add more funds
-                    once the game has started. The Quit button will tell
-                    you your current bank roll, make sure you want to leave, and take you
-                    back to the selection screen. The Roll Dice button rolls the dice,
-                    and the Rules button shows this screen again if you need a refresher. </p>
-                    <button class='close'>Got it</button>
-                </div>
+            <div class="bg-modal-quit">
                 <div class="modal-content-quit">
                     <h2>Quitting Already?</h2>
                     <p>Are you sure that you want to quit? You could win a lot of money.
@@ -87,7 +64,39 @@
                         button, have a great day and come back as soon as you can!
                     </p>
                     <button class='leave'>Leave</button>
-                    <button class='close'>Keep Playing</button>
+                    <button class='play'>Keep Playing</button>
+                </div>
+            </div>
+            <div class="bg-modal-rules">
+                <div class="modal-content-rules">
+                    <h2>The Rules</h2>
+                    <p>Welcome to Simplified Craps!<br>
+                        The rules are as follows: You will be making
+                        bets on two dice being rolled, and your
+                        options for betting are called
+                        Pass or Don't Pass. Pass means you are betting
+                        a 7 or an 11 will be rolled first, while betting 
+                        on Don't Pass means you are betting a 2, 3, or 12
+                        will be rolled first. Any other numbers being rolled 
+                        will result in rerolling until one of the
+                        previously stated numbers are rolled. Calling the 
+                        bet correctly will result in doubling your bet,
+                        while calling it incorrectly will result in you losing
+                        that bet. You will be asked how much money you are
+                        bringing to the table, and you can't add more funds
+                        once the game has started. The Quit button will make sure you want to leave and take you
+                        back to the selection screen. The Roll Dice button rolls the dice,
+                        and the Rules button shows this screen again if you need a refresher. </p>
+                    <button class='close'>Got it</button>
+                </div>
+            </div>
+            <div class="bg-modal-lose">
+                <div class="modal-content-lose">
+                    <h2>Out of Funds</h2>
+                    <p>It was a pleasure having you here, but you currently don't have any
+                        more money to play with, so you will have to leave and come back when you do.
+                    </p>
+                    <button class='lose'>Leave</button>
                 </div>
             </div>
             <script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>

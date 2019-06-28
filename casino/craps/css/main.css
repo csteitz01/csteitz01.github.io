@@ -163,13 +163,20 @@ h1 {
 MODAL
 *****************************/
 
-.bg-modal {
+.bg-modal-rules {
+    display: flex;
+}
+
+.bg-modal-quit, .bg-modal-lose {
+    display: none;
+}
+
+.bg-modal-rules, .bg-modal-quit, .bg-modal-lose {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -186,6 +193,8 @@ MODAL
 
 .modal-content-rules .close {
     margin: 1.1em;
+    width: 5em;
+    height: 5em;
 }
 
 .modal-content-rules h2 {
@@ -194,23 +203,41 @@ MODAL
 
 .modal-content-quit {
     width: 31.25em;
-    height: 22em;
+    height: 14em;
     background-color: white;
     border-radius: 0.3125em;
     text-align: center;
     padding: 1.25em;
     margin-bottom: 0.3125em;
-    display: none;
 }
 
-.modal-content-quit .leave {
-    margin: 1.1em;
-}
-
-.modal-content-quit .close {
-    margin: 1.1em;
+.modal-content-quit .leave, .modal-content-quit .play {
+    margin: 1.1em 2.5em;
+    padding: 1em;
+    width: 5.5em;
+    height: 5.5em;
+    vertical-align: middle;
 }
 
 .modal-content-quit h2 {
+    margin: 10px;
+}
+
+.modal-content-lose {
+    width: 31.25em;
+    height: 12em;
+    background-color: white;
+    border-radius: 0.3125em;
+    text-align: center;
+    padding: 1.25em;
+    margin-bottom: 0.3125em;
+}
+
+.modal-content-rules .lose {
+    margin: 1.1em;
+    width: 5em;
+    height: 5em;
+}
+.modal-content-lose h2 {
     margin: 10px;
 }

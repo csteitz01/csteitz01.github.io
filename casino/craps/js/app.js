@@ -32,11 +32,16 @@ function rollDice() {
                 enableBet();
                 broll = broll + (2 * bet);
                 $('.blank1').text(broll);
-            } else if (diceDontPass.includes(diceTotal)) {
-                $("#status h3").append(" You lost this bet, but there's always the next bet.");
+            } else if (diceDontPass.includes(diceTotal) && broll > 1) {
+                $("#status h3").append(" You lost this bet, but there's always next time.");
                 enableBet();
             } else if (diceFlop.includes(diceTotal)) {
                 $("#status h3").append(" Neither bet won. Please roll again.");
+            } else if (diceDontPass.includes(diceTotal) && broll < 1) {
+                $("#status h3").append(" You lost this bet, and I regret to inform you that you have no money left");
+                setTimeout(function() { 
+                    lose(); 
+                }, 1000);
             }
         // else if covers outcomes of betting pass
         } else if ($("input[value='dontPass']:checked")) {
@@ -46,13 +51,22 @@ function rollDice() {
                 broll = broll + (2 * bet);
                 $('.blank1').text(broll);
             } else if (dicePass.includes(diceTotal)) {
-                $("#status h3").append(" You lost this bet, but there's always the next bet.");
+                $("#status h3").append(" You lost this bet, but there's always next time.");
                 enableBet();
             } else if (diceFlop.includes(diceTotal)) {
                 $("#status h3").append(" Neither bet won. Please roll again.");
+            } else if (dicePass.includes(diceTotal) && broll < 1) {
+                $("#status h3").append(" You lost this bet, and I regret to inform you that you have no money left");
+                setTimeout(function() { 
+                    lose(); 
+                }, 1000);
             }
         }
     }
+}
+
+function lose() {
+    document.querySelector('.bg-modal-lose').style.display = 'flex';
 }
 
 // function that clears bet amount and shows the bet submit input and button, and enables bet type radio button
@@ -99,16 +113,26 @@ $(".bet-submit").click(function(){
     }
   });
 
-$(".quit").click(function(){
-    document.querySelector('.modal-content-quit').style.display = 'flex';
-})
+ $(".quit").click(function(){
+    document.querySelector('.bg-modal-quit').style.display = 'flex';
+ })
 
-document.getElementById('rules').addEventListener('click',
-function() {
-    document.querySelector('.bg-modal').style.display = 'flex';
+$("#rules").click(function(){
+    document.querySelector('.bg-modal-rules').style.display = 'flex';
 });
 
-document.querySelector('.close').addEventListener('click',
-function() {
-    document.querySelector('.bg-modal').style.display = 'none';
+$(".close").click(function(){
+    document.querySelector('.bg-modal-rules').style.display = 'none';
+});
+
+$(".play").click(function(){
+    document.querySelector('.bg-modal-quit').style.display = 'none';
+});
+
+$(".leave").click(function(){
+    history.back()
+});
+
+$(".lose").click(function(){
+    history.back()
 });
