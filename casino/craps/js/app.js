@@ -4,6 +4,9 @@ var broll;
 // variable that holds the bet amount being made
 var bet;
 
+// pass / don't pass
+var pass = null;
+
 // variables to help determine if a person wins a bet, or if the dice need to be rolled again
 var dicePass = [7, 11];
 var diceDontPass = [2, 3, 12];
@@ -26,7 +29,7 @@ function rollDice() {
         document.querySelector('.d6').setAttribute('src', dieTwoImage);
         $("input[type=radio]").attr('disabled', true);
         // first if covers outcomes of betting pass
-        if ($("input[value='pass']:checked")) {
+        if (pass) {
             if (dicePass.includes(diceTotal)) {
                 $("#status h3").append(" You won $" + (bet * 2) + "!");
                 enableBet();
@@ -44,13 +47,13 @@ function rollDice() {
                 }, 1000);
             }
         // else if covers outcomes of betting pass
-        } else if ($("input[value='dontPass']:checked")) {
+        } else if (!pass) {
             if (diceDontPass.includes(diceTotal)) {
                 $("#status h3").append(" You won $" + (bet * 2) + "!");
                 enableBet();
                 broll = broll + (2 * bet);
                 $('.blank1').text(broll);
-            } else if (dicePass.includes(diceTotal)) {
+            } else if (dicePass.includes(diceTotal && broll > 1)) {
                 $("#status h3").append(" You lost this bet, but there's always next time.");
                 enableBet();
             } else if (diceFlop.includes(diceTotal)) {
@@ -135,4 +138,12 @@ $(".leave").click(function(){
 
 $(".lose").click(function(){
     history.back()
+});
+
+$("input[value='dontPass']").click(function(){
+    pass = false;
+});
+
+$("input[value='pass']").click(function(){
+    pass = true;
 });
