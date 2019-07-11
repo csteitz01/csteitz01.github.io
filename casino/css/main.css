@@ -42,6 +42,10 @@ h1 {
     z-index: 1000;
 }
 
+p {
+  font-size: 1.8em;
+}
+
 /**************
 HEADING
 **************/
@@ -114,9 +118,9 @@ FLEXBOX
 
   header {
       display: flex;
-      flex: 1 100%;
+      flex: 0 100%;
       flex-flow: row wrap;
-      padding: 20px 100px 0 100px;
+      padding: 20px 100px 0px 100px;
       align-content: flex-start;
   }
 

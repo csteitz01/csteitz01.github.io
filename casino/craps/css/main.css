@@ -27,7 +27,7 @@ form button {
     width: 5em;
     height: 2em;
     margin-left: 10px;
-    font-size: 1em;
+    font-size: 1.3em;
     background: #7bcbc4;
     border-radius: .2em;
     font-weight: bold;
@@ -72,6 +72,7 @@ input[type='number'] {
     height: 2em;
     border: none;
     outline: none;
+    font-size: 1.5em;
 }
 
 input[type='button'] {
@@ -146,6 +147,18 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: 2.3em;
+}
+
+.types p {
+    font-size: 2em;
+}
+
+#status h3 {
+    font-size: 2em;
+}
+
 .d1, .d6 {
     float: center;
     padding: 0.625em;
@@ -154,8 +167,9 @@ h1 {
 }
 
 #quit, #dieButton, #rules {
-    width: 5em;
-    height: 5em;
+    width: 3em;
+    height: 3em;
+    font-size: 2em;
 }
 
 
@@ -179,6 +193,7 @@ MODAL
     top: 0;
     justify-content: center;
     align-items: center;
+    font-size: 2em;
 }
 
 .modal-content-rules {
@@ -193,8 +208,10 @@ MODAL
 
 .modal-content-rules .close {
     margin: 1.1em;
-    width: 5em;
-    height: 5em;
+    margin-top: .15em;
+    width: 3em;
+    height: 3em;
+    font-size: 1.5em;
 }
 
 .modal-content-rules h2 {
@@ -214,8 +231,10 @@ MODAL
 .modal-content-quit .leave, .modal-content-quit .play {
     margin: 1.1em 2.5em;
     padding: 1em;
-    width: 5.5em;
-    height: 5.5em;
+    margin-top: .35em;
+    width: 5em;
+    height: 5em;
+    font-size: 1.2em;
     vertical-align: middle;
 }
 
@@ -225,7 +244,7 @@ MODAL
 
 .modal-content-lose {
     width: 31.25em;
-    height: 10em;
+    height: 12em;
     background-color: white;
     border-radius: 0.3125em;
     text-align: center;
@@ -234,10 +253,11 @@ MODAL
 }
 
 .modal-content-lose .lose {
-    margin: 1.1em;
+    margin: .35em 1.1em;
     padding: 1em;
     width: 5em;
     height: 5em;
+    font-size: 1.0005em;
 }
 .modal-content-lose h2 {
     margin: 10px;
