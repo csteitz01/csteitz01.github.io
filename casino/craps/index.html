@@ -1,105 +1,119 @@
 <!DOCTYPE hmtl>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Craps</title>
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/responsive.css">
-    </head>
-        <body class='wrapper'>
-            <header>
-                <h1>Simplified Craps</h1>
-            </header>
-            <div class='bankroll'>
-                <h2>Bankroll: $</h2>
-                <form id='bank'>
-                    <h2 class='blank1'><span></span></h2>
-                    <input type="number" id='money' class='initial' placeholder="0">
-                    <button type="button" class='submit' name="submit" value="submit">Submit</button>
-                </form>
-            </div>
-            <div class='bet-amount'>
-                <h2>Bet Amount $</h2>
-                <form id='bet'>
-                    <h2 class='blank2'><span></span></h2>
-                    <input type="number" id='money' class='bet-size' placeholder="0">
-                    <button type="button" class='bet-submit' name="submit" value="submit">Submit</button>
-                </form>
-            </div>
-            <div class='bet-type'>
-                <h2 class='line'>Bet Type</h2>
-                <div class='types'>
-                    <input type="radio" name='bet' value='pass'><p>&nbsp; Pass</p><span id='radio-spacing'></span>
-                    <input type="radio" name='bet' value='dontPass'><p>&nbsp; Don't Pass</p>
-                </div>
-            </div>
-            <div class='display'>
-                <div id='die1' class='dice'>
-                    <img src="img/dice1.png" class='d1' alt='die showing one'>
-                </div>
-                <div id='die2' class='dice'>
-                    <img src="img/dice6.png" class='d6' alt='die showing six'>
-                </div>
-            </div>
-            <div class='options'>
-                <div class='quit'>
-                    <button id="quit">Quit</button>
-                </div>
-                <div class='play'>
-                    <button id='dieButton' onclick="rollDice()">Roll Dice</button>
-                </div>
-                <div class='rules'>
-                    <button id='rules'>Rules</button>
-                </div>
-            </div>
-            <div id='status'>
-                <h3>The dice roll total</h3>
-            </div>
-            <div class="bg-modal-quit">
-                <div class="modal-content-quit">
-                    <h2>Quitting Already?</h2>
-                    <p>Are you sure that you want to quit? You could win a lot of money.
-                        If you changed your mind and want to keep playing, then click the 
-                        Keep Playing button. If you really are done playing, then click the Leave
-                        button, have a great day and come back as soon as you can!
-                    </p>
-                    <button class='leave'>Leave</button>
-                    <button class='play'>Keep Playing</button>
-                </div>
-            </div>
-            <div class="bg-modal-rules">
-                <div class="modal-content-rules">
-                    <h2>The Rules</h2>
-                    <p>Welcome to Simplified Craps!<br>
-                        The rules are as follows: You will be making
-                        bets on two dice being rolled, and your
-                        options for betting are called
-                        Pass or Don't Pass. Pass means you are betting
-                        a 7 or an 11 will be rolled first, while betting 
-                        on Don't Pass means you are betting a 2, 3, or 12
-                        will be rolled first. Any other numbers being rolled 
-                        will result in rerolling until one of the
-                        previously stated numbers are rolled. Calling the 
-                        bet correctly will result in doubling your bet,
-                        while calling it incorrectly will result in you losing
-                        that bet. You will be asked how much money you are
-                        bringing to the table, and you can't add more funds
-                        once the game has started. The Quit button will make sure you want to leave and take you
-                        back to the selection screen. The Roll Dice button rolls the dice,
-                        and the Rules button shows this screen again if you need a refresher. </p>
-                    <button class='close'>Got it</button>
-                </div>
-            </div>
-            <div class="bg-modal-lose">
-                <div class="modal-content-lose">
-                    <h2>Out of Funds</h2>
-                    <p>It was a pleasure having you here, but you currently don't have any
-                        more money to play with, so you will have to leave and come back when you do.
-                    </p>
-                    <button class='lose'>Leave</button>
-                </div>
-            </div>
-            <script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
-            <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
-        </body>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK219QX8FY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VK219QX8FY');
+    </script>
+    <meta charset="utf-8">
+    <title>Craps</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class='wrapper'>
+    <header>
+        <h1>Simplified Craps</h1>
+    </header>
+    <div class='bankroll'>
+        <h2>Bankroll: $</h2>
+        <form id='bank'>
+            <h2 class='blank1'><span></span></h2>
+            <input type="number" id='money' class='initial' placeholder="0">
+            <button type="button" class='submit' name="submit" value="submit">Submit</button>
+        </form>
+    </div>
+    <div class='bet-amount'>
+        <h2>Bet Amount $</h2>
+        <form id='bet'>
+            <h2 class='blank2'><span></span></h2>
+            <input type="number" id='money' class='bet-size' placeholder="0">
+            <button type="button" class='bet-submit' name="submit" value="submit">Submit</button>
+        </form>
+    </div>
+    <div class='bet-type'>
+        <h2 class='line'>Bet Type</h2>
+        <div class='types'>
+            <input type="radio" name='bet' value='pass'>
+            <p>&nbsp; Pass</p><span id='radio-spacing'></span>
+            <input type="radio" name='bet' value='dontPass'>
+            <p>&nbsp; Don't Pass</p>
+        </div>
+    </div>
+    <div class='display'>
+        <div id='die1' class='dice'>
+            <img src="img/dice1.png" class='d1' alt='die showing one'>
+        </div>
+        <div id='die2' class='dice'>
+            <img src="img/dice6.png" class='d6' alt='die showing six'>
+        </div>
+    </div>
+    <div class='options'>
+        <div class='quit'>
+            <button id="quit">Quit</button>
+        </div>
+        <div class='play'>
+            <button id='dieButton' onclick="rollDice()">Roll Dice</button>
+        </div>
+        <div class='rules'>
+            <button id='rules'>Rules</button>
+        </div>
+    </div>
+    <div id='status'>
+        <h3>The dice roll total</h3>
+    </div>
+    <div class="bg-modal-quit">
+        <div class="modal-content-quit">
+            <h2>Quitting Already?</h2>
+            <p>Are you sure that you want to quit? You could win a lot of money.
+                If you changed your mind and want to keep playing, then click the
+                Keep Playing button. If you really are done playing, then click the Leave
+                button, have a great day and come back as soon as you can!
+            </p>
+            <button class='leave'>Leave</button>
+            <button class='play'>Keep Playing</button>
+        </div>
+    </div>
+    <div class="bg-modal-rules">
+        <div class="modal-content-rules">
+            <h2>The Rules</h2>
+            <p>Welcome to Simplified Craps!<br>
+                The rules are as follows: You will be making
+                bets on two dice being rolled, and your
+                options for betting are called
+                Pass or Don't Pass. Pass means you are betting
+                a 7 or an 11 will be rolled first, while betting
+                on Don't Pass means you are betting a 2, 3, or 12
+                will be rolled first. Any other numbers being rolled
+                will result in rerolling until one of the
+                previously stated numbers are rolled. Calling the
+                bet correctly will result in doubling your bet,
+                while calling it incorrectly will result in you losing
+                that bet. You will be asked how much money you are
+                bringing to the table, and you can't add more funds
+                once the game has started. The Quit button will make sure you want to leave and take you
+                back to the selection screen. The Roll Dice button rolls the dice,
+                and the Rules button shows this screen again if you need a refresher. </p>
+            <button class='close'>Got it</button>
+        </div>
+    </div>
+    <div class="bg-modal-lose">
+        <div class="modal-content-lose">
+            <h2>Out of Funds</h2>
+            <p>It was a pleasure having you here, but you currently don't have any
+                more money to play with, so you will have to leave and come back when you do.
+            </p>
+            <button class='lose'>Leave</button>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
 </html>
